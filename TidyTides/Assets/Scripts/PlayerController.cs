@@ -43,8 +43,10 @@ public class PlayerController : MonoBehaviour
         {
             rb.gravityScale = 1.5f;
             //Debug.Log("In water");
-
-            
+        }
+        else
+        {
+            rb.gravityScale = 0;
         }
       
     }
