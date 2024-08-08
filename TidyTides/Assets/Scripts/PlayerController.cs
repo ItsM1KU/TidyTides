@@ -1,16 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
 
     [SerializeField] Rigidbody2D rb;
     [SerializeField] float moveSpeed = 2.5f;
-    [SerializeField] LayerMask oceanLayer;
+    [SerializeField] LayerMask boatLayer;
+    [SerializeField] TextMeshProUGUI InteractText;
 
-    //[SerializeField] float oxygenTank = 10.0f;
 
     private PlayerInputs playerInputs;
     private Vector2 movement;
@@ -39,15 +41,17 @@ public class PlayerController : MonoBehaviour
     {
         movement = playerInputs.Player.Move.ReadValue<Vector2>();
 
-        if (Physics2D.OverlapCircle(rb.position, 1f, oceanLayer))
-        {
-            rb.gravityScale = 1.5f;
-            //Debug.Log("In water");
+        if (Physics2D.OverlapCircle(rb.position, 0.5f, boatLayer)){
+
+            InteractText.gameObject.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("You have entered the ocean!!");
+            }
         }
         else
         {
-            rb.gravityScale = 0;
+            InteractText.gameObject.SetActive(false);
         }
-      
     }
 }
