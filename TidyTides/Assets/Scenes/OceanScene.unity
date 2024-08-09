@@ -391,7 +391,8 @@ MonoBehaviour:
     m_Bits: 8
   interactText: {fileID: 1140055254}
   OxyText: {fileID: 1336422930}
-  oxygenLevel: 20
+  oxygenLevel: 2
+  health: 2
 --- !u!61 &860344084
 BoxCollider2D:
   m_ObjectHideFlags: 0
