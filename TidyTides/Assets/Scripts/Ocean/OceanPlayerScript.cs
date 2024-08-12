@@ -38,7 +38,7 @@ public class OceanPlayerScript : MonoBehaviour
         {
             interactText.gameObject.SetActive(true);
 
-            if (oceanMovement.Player.Interact.ReadValue<float>() > 0)
+            if (oceanMovement.Player.Interact.IsPressed())
             {
                 Debug.Log("Leaving ocean!!");
             }
