@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
 {
 
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] Animator anim;
     [SerializeField] float moveSpeed = 2.5f;
     [SerializeField] LayerMask boatLayer;
     [SerializeField] TextMeshProUGUI InteractText;
@@ -40,6 +41,16 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         movement = playerInputs.Player.Move.ReadValue<Vector2>();
+
+        if(movement.x != 0)
+        {
+            anim.SetFloat("Horizontal", movement.x);
+            anim.SetBool("isWalking", true);
+        }
+        else
+        {
+            anim.SetBool("isWalking", false);
+        }
 
         if (Physics2D.OverlapCircle(rb.position, 0.5f, boatLayer)){
 

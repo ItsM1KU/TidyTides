@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 38aff76ef6b9d974f878be32c30e585d
+guid: bc7aab63fec4ebd4ea0e4d4c2bf64d0e
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,10 +123,10 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SteamMan_0
+      name: output-onlinepngtools (1)_0
       rect:
         serializedVersion: 2
-        x: 4
+        x: 24
         y: 0
         width: 20
         height: 36
@@ -137,8 +137,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89cf6ad3d4b924248b0b9b9403d3dd33
-      internalID: -33722107
+      spriteID: da138eec566245140abc46a0f16f7e5e
+      internalID: 434052083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: output-onlinepngtools (1)_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 0
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ec0fa57712d6ba458d36ecadfe8f7fb
+      internalID: 2121169889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: output-onlinepngtools (1)_2
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 21
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34b60a095728c74408058fceee33c4f2
+      internalID: 690608908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: output-onlinepngtools (1)_3
+      rect:
+        serializedVersion: 2
+        x: 168
+        y: 0
+        width: 20
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3368436baaf7d64bb31d72c79717d45
+      internalID: 1310633060
       vertices: []
       indices: 
       edges: []
@@ -154,7 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SteamMan_0: -33722107
+      output-onlinepngtools (1)_0: 434052083
+      output-onlinepngtools (1)_1: 2121169889
+      output-onlinepngtools (1)_2: 690608908
+      output-onlinepngtools (1)_3: 1310633060
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
