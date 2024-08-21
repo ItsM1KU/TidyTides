@@ -9,6 +9,7 @@ using UnityEngine.EventSystems;
 public class OceanPlayerScript : MonoBehaviour
 {
     [SerializeField] Rigidbody2D rb;
+    [SerializeField] Animator anim;
     [SerializeField] float moveSpeed = 5.0f;
     [SerializeField] LayerMask BoatLayer;
     [SerializeField] LayerMask garbageLayer;
@@ -37,6 +38,23 @@ public class OceanPlayerScript : MonoBehaviour
     {
         movement = oceanMovement.Player.Move.ReadValue<Vector2>();
 
+        if(movement.x != 0 || movement.y != 0)
+        {
+            anim.SetFloat("Horizontal", movement.x);
+            anim.SetFloat("Vertical", movement.y);
+
+            anim.SetBool("isSwimming", true);
+        }
+        else
+        {
+            anim.SetBool("isSwimming", false);
+        }
+
+        interactions();
+    }
+
+    void interactions()
+    {
         if (Physics2D.OverlapCircle(rb.position, 0.5f, BoatLayer))
         {
             interactText.gameObject.SetActive(true);
@@ -46,7 +64,7 @@ public class OceanPlayerScript : MonoBehaviour
                 Debug.Log("Leaving ocean!!");
             }
         }
-        else if(Physics2D.OverlapCircle(rb.position, 0.2f, garbageLayer))
+        else if (Physics2D.OverlapCircle(rb.position, 0.2f, garbageLayer))
         {
             interactText.gameObject.SetActive(true);
             var garbage = Physics2D.OverlapCircle(rb.position, 0.5f, garbageLayer);

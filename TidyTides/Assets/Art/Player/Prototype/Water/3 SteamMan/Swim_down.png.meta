@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: a7328d523a01feb4f93255730a6d85fd
+guid: f4a6a39b6fb17294783670a8cd8a4d2a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -123,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Idle2_0
+      name: Swim_down_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 3
-        width: 17
-        height: 36
+        x: 3
+        y: 10
+        width: 35
+        height: 31
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8ed1de39ba62ef48962876fe2797500
-      internalID: 1185105344
+      spriteID: 480819d0db61c3d4fbd380e51f2164fa
+      internalID: -720585165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle2_1
+      name: Swim_down_1
       rect:
         serializedVersion: 2
-        x: 55
-        y: 4
-        width: 19
-        height: 36
+        x: 49
+        y: 13
+        width: 35
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e87a7cb1617f6e0489ce94135e802ea4
-      internalID: 1237116733
+      spriteID: 4a5f4e8008f7f5a4e848170af7e39f52
+      internalID: 32301245
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle2_2
+      name: Swim_down_2
       rect:
         serializedVersion: 2
-        x: 100
-        y: 4
-        width: 25
-        height: 36
+        x: 99
+        y: 11
+        width: 32
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a518742c37bef3d4da7abdcf3148b42a
-      internalID: 1243145043
+      spriteID: bad02b5e97f96c641a14603e6b838227
+      internalID: 1210218181
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle2_3
+      name: Swim_down_3
       rect:
         serializedVersion: 2
-        x: 146
-        y: 4
-        width: 29
-        height: 36
+        x: 149
+        y: 13
+        width: 34
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0385b8db4844cb48a10e54da861710d
-      internalID: -1420095885
+      spriteID: 2d05b0f3607e34d48a6bb9385ebf9e31
+      internalID: 1674289889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle2_4
+      name: Swim_down_4
       rect:
         serializedVersion: 2
-        x: 197
-        y: 4
-        width: 22
-        height: 36
+        x: 195
+        y: 13
+        width: 35
+        height: 29
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 000149b8bdc8b3949a7df67d2fc937ac
-      internalID: 2016200524
+      spriteID: 407ac05e7ca5490478942fd0ac0f4305
+      internalID: 357511898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Idle2_5
+      name: Swim_down_5
       rect:
         serializedVersion: 2
         x: 247
-        y: 4
-        width: 18
-        height: 36
+        y: 12
+        width: 32
+        height: 28
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,8 +242,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fffd2762f5a30e428188785b666f738
-      internalID: -64492025
+      spriteID: 4fb67411de2887448bc3d8ecc9a550b9
+      internalID: 989162101
       vertices: []
       indices: 
       edges: []
@@ -259,12 +259,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Idle2_0: 1185105344
-      Idle2_1: 1237116733
-      Idle2_2: 1243145043
-      Idle2_3: -1420095885
-      Idle2_4: 2016200524
-      Idle2_5: -64492025
+      Swim_down_0: -720585165
+      Swim_down_1: 32301245
+      Swim_down_2: 1210218181
+      Swim_down_3: 1674289889
+      Swim_down_4: 357511898
+      Swim_down_5: 989162101
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
