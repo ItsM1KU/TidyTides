@@ -11,7 +11,7 @@ TagManager:
   - Boat
   - Water
   - UI
-  - 
+  - Garbage
   - 
   - 
   - 
@@ -40,4 +40,19 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 2562132317
+    locked: 0
+  - name: Foreground
+    uniqueID: 1235247795
+    locked: 0
+  - name: Props
+    uniqueID: 4279347767
+    locked: 0
+  - name: Characters
+    uniqueID: 3546820649
+    locked: 0
+  - name: UI
+    uniqueID: 3399119343
     locked: 0
