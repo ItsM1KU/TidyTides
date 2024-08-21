@@ -4,6 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -57,7 +58,7 @@ public class PlayerController : MonoBehaviour
             InteractText.gameObject.SetActive(true);
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("You have entered the ocean!!");
+                SceneManager.LoadScene("OceanScene");
             }
         }
         else

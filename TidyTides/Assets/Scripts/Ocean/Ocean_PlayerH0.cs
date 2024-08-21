@@ -23,7 +23,7 @@ public class Ocean_PlayerH0 : MonoBehaviour
         {
             oxy -= 0.5f;
             oxygenLevel -= 0.5f;
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(4f);
             //Debug.Log(oxy + " Left");
             //Debug.Log(oxygenLevel);
             OxyText.text = ("Oxygen Level: " + oxy.ToString() + " / 20");
@@ -38,7 +38,7 @@ public class Ocean_PlayerH0 : MonoBehaviour
             hp -= 0.5f;
             //Debug.Log(hp + " left!!");
             hpText.text = ("Health: " + hp.ToString() + " / 5");
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(3f);
         }
         Debug.Log("Player dies!!");
     }

@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class OceanPlayerScript : MonoBehaviour
 {
@@ -61,7 +62,7 @@ public class OceanPlayerScript : MonoBehaviour
 
             if (oceanMovement.Player.Interact.IsPressed())
             {
-                Debug.Log("Leaving ocean!!");
+                SceneManager.LoadScene("LandScene");
             }
         }
         else if (Physics2D.OverlapCircle(rb.position, 0.2f, garbageLayer))
