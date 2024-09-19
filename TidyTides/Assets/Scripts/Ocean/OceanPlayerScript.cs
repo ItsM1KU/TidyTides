@@ -16,13 +16,15 @@ public class OceanPlayerScript : MonoBehaviour
     [SerializeField] LayerMask garbageLayer;
     [SerializeField] TextMeshProUGUI interactText;
 
-
+    private Inventory inventory;
     private OceanMovement oceanMovement;
     private Vector2 movement;
 
     private void Awake()
     {
         oceanMovement = new OceanMovement();
+
+        inventory = new Inventory();
     }
 
     private void OnEnable()
@@ -65,7 +67,7 @@ public class OceanPlayerScript : MonoBehaviour
                 SceneManager.LoadScene("LandScene");
             }
         }
-        else if (Physics2D.OverlapCircle(rb.position, 0.2f, garbageLayer))
+        /*else if (Physics2D.OverlapCircle(rb.position, 0.2f, garbageLayer))
         {
             interactText.gameObject.SetActive(true);
             var garbage = Physics2D.OverlapCircle(rb.position, 0.5f, garbageLayer);
@@ -73,7 +75,7 @@ public class OceanPlayerScript : MonoBehaviour
             {
                 Destroy(garbage.gameObject);
             }
-        }
+        }*/
         else
         {
             interactText.gameObject.SetActive(false);
