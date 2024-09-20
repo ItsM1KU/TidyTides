@@ -8,6 +8,8 @@ public class InventoryController : MonoBehaviour
 
     bool invActive;
 
+    public itemSlot[] itemslot;
+
     private void Start()
     {
 
@@ -27,8 +29,24 @@ public class InventoryController : MonoBehaviour
         }
     }
 
-    public void AddItem(string itemName, int quantity, Sprite itemSprite)
+    public void AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
     {
-        Debug.Log(itemName);
+        for(int i = 0; i < itemslot.Length; i++)
+        {
+            if (!itemslot[i].isFull)
+            {
+                itemslot[i].Additem(itemName, quantity, itemSprite, itemDescription);
+                return;
+            }
+        }
+    }
+
+    public void DeselectSlots()
+    {
+        for (int i = 0;i < itemslot.Length;i++)
+        {
+            itemslot[i].SelectedPanel.SetActive(false);
+            itemslot[i].slotIsSelected = false;
+        }
     }
 }

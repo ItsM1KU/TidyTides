@@ -7,7 +7,10 @@ public class Item : MonoBehaviour
 {
     [SerializeField] private string itemName;
     [SerializeField] private int amount;
-    [SerializeField] Sprite itemSprite;
+    [SerializeField] private Sprite itemSprite;
+
+    [TextArea]
+    [SerializeField] private string itemDescription;
 
     private InventoryController inventoryController;
 
@@ -21,7 +24,7 @@ public class Item : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            inventoryController.AddItem(itemName, amount, itemSprite);
+            inventoryController.AddItem(itemName, amount, itemSprite, itemDescription);
             Destroy(gameObject);
         }
     }
