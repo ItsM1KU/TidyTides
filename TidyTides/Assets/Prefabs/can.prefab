@@ -177,4 +177,5 @@ MonoBehaviour:
   itemName: Can
   amount: 0
   itemSprite: {fileID: 21300000, guid: c88019cc6cb4fb84390c5fa2d2d991c5, type: 3}
+  itemUsable: 1
   itemDescription: A metal can thrown into the ocean and it can be sold at the shop

@@ -10,6 +10,8 @@ public class InventoryController : MonoBehaviour
 
     public itemSlot[] itemslot;
 
+    public ItemSO[] itemSOs;
+
     private void Start()
     {
 
@@ -29,16 +31,34 @@ public class InventoryController : MonoBehaviour
         }
     }
 
-    public void AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription)
+    public void useItem(string itemName)
+    {
+        for (int i = 0; i < itemSOs.Length; i++)
+        {
+            if (itemSOs[i].itemName == itemName) 
+            {
+                itemSOs[i].useItem();
+            }
+        }
+    }
+
+    public int AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription, bool itemUsable)
     {
         for(int i = 0; i < itemslot.Length; i++)
         {
-            if (!itemslot[i].isFull)
+            if (!itemslot[i].isFull && itemslot[i].itemName == itemName || itemslot[i].quantity == 0)
             {
-                itemslot[i].Additem(itemName, quantity, itemSprite, itemDescription);
-                return;
+                int itemLeftOvers = itemslot[i].Additem(itemName, quantity, itemSprite, itemDescription, itemUsable);
+
+                if (itemLeftOvers > 0)
+                {
+                    itemLeftOvers = AddItem(itemName, itemLeftOvers, itemSprite, itemDescription, itemUsable);
+                }
+
+                return itemLeftOvers;
             }
         }
+        return quantity;
     }
 
     public void DeselectSlots()

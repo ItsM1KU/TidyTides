@@ -2,46 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Ocean_PlayerH0 : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI OxyText;
-    [SerializeField] TextMeshProUGUI hpText;
-    [SerializeField] float oxygenLevel = 20f;
-    [SerializeField] float healthLevel = 1.0f;
+    [SerializeField] List<GameObject> healthSprites = new List<GameObject>();
+    [SerializeField] List<GameObject> oxySprites = new List<GameObject>();
 
-
+    private int i = 0;
+    private int j = 0;
+    private int healthCount = 5;
+    private int oxyCount = 8;
     private void Start()
     {
-        StartCoroutine(Oxycoroutine(oxygenLevel));
+        StartCoroutine(Oxycoroutine(oxyCount));
     }
 
-    IEnumerator Oxycoroutine(float oxy)
+    IEnumerator Oxycoroutine(int oxyCount)
     {
-        //float oxyleft = 20;
-        while (oxy > 0)
-        {
-            oxy -= 0.5f;
-            oxygenLevel -= 0.5f;
-            yield return new WaitForSeconds(4f);
-            //Debug.Log(oxy + " Left");
-            //Debug.Log(oxygenLevel);
-            OxyText.text = ("Oxygen Level: " + oxy.ToString() + " / 20");
+        while (oxyCount > 0)
+        {            
+            oxySprites[j].gameObject.SetActive(false);
+            oxyCount--;
+            j++;
+            yield return new WaitForSeconds(10f);
         }
-        StartCoroutine(healthRoutine(healthLevel));
+        StartCoroutine(healthRoutine(healthCount));
     }
 
-    IEnumerator healthRoutine(float hp)
+    IEnumerator healthRoutine(int healthcount)
     {
-        while (hp > 0)
+        while (healthcount > 0)
         {
-            hp -= 0.5f;
-            //Debug.Log(hp + " left!!");
-            hpText.text = ("Health: " + hp.ToString() + " / 5");
-            yield return new WaitForSeconds(3f);
+            healthSprites[i].gameObject.SetActive(false);
+            healthcount--;
+            i++;
+            yield return new WaitForSeconds(5f);
         }
         Debug.Log("Player dies!!");
     }
-
-
 }

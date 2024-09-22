@@ -16,15 +16,12 @@ public class OceanPlayerScript : MonoBehaviour
     [SerializeField] LayerMask garbageLayer;
     [SerializeField] TextMeshProUGUI interactText;
 
-    private Inventory inventory;
     private OceanMovement oceanMovement;
     private Vector2 movement;
 
     private void Awake()
     {
         oceanMovement = new OceanMovement();
-
-        inventory = new Inventory();
     }
 
     private void OnEnable()
