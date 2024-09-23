@@ -12,9 +12,10 @@ public class ItemSO : ScriptableObject
 
     public void useItem()
     {
-        if(StatToChange == statToChange.none)
+        if(StatToChange == statToChange.oxygen)
         {
-            Debug.Log("You cant use this item!!");
+            Ocean_PlayerH0 playerHO = GameObject.Find("Canvas").GetComponent<Ocean_PlayerH0>();
+            playerHO.oxyTank();
         }
     }
 

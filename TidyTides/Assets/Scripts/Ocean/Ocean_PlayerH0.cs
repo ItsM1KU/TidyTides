@@ -9,36 +9,60 @@ public class Ocean_PlayerH0 : MonoBehaviour
     [SerializeField] List<GameObject> healthSprites = new List<GameObject>();
     [SerializeField] List<GameObject> oxySprites = new List<GameObject>();
 
-    private int i = 0;
-    private int j = 0;
-    private int healthCount = 5;
-    private int oxyCount = 8;
+    [SerializeField] GameObject oxyprefab;
+
+
+
     private void Start()
     {
-        StartCoroutine(Oxycoroutine(oxyCount));
+        StartCoroutine(Oxycoroutine());
     }
 
-    IEnumerator Oxycoroutine(int oxyCount)
+    IEnumerator Oxycoroutine()
     {
-        while (oxyCount > 0)
-        {            
-            oxySprites[j].gameObject.SetActive(false);
-            oxyCount--;
-            j++;
+        while (oxySprites.Count > 0)
+        {
+            Destroy(oxySprites[oxySprites.Count - 1].gameObject);
+            oxySprites.RemoveAt(oxySprites.Count - 1);
             yield return new WaitForSeconds(10f);
         }
-        StartCoroutine(healthRoutine(healthCount));
+        StartCoroutine(healthRoutine());
     }
 
-    IEnumerator healthRoutine(int healthcount)
+    IEnumerator healthRoutine()
     {
-        while (healthcount > 0)
+        while (healthSprites.Count > 0)
         {
-            healthSprites[i].gameObject.SetActive(false);
-            healthcount--;
-            i++;
+            Destroy(healthSprites[healthSprites.Count - 1].gameObject);
+            healthSprites.RemoveAt(healthSprites.Count - 1);
             yield return new WaitForSeconds(5f);
         }
         Debug.Log("Player dies!!");
+    }
+
+    public void oxyTank()
+    {
+        if (oxySprites.Count < 10)
+        {
+
+            GameObject newoxySprite = Instantiate(oxyprefab);
+
+            newoxySprite.transform.SetParent(oxySprites[0].gameObject.transform.parent);
+            newoxySprite.transform.localScale = new Vector3(0.808f, 0.808f, 0.808f);
+            newoxySprite.SetActive(true);
+
+            if (oxySprites.Count > 0)
+            {
+                RectTransform lastbubbleRect = oxySprites[oxySprites.Count - 1].GetComponent<RectTransform>();
+                RectTransform newbubbleRect = newoxySprite.GetComponent<RectTransform>();
+
+                Vector3 newposition = lastbubbleRect.localPosition;
+                newposition.x += lastbubbleRect.rect.width + 2f;
+                newbubbleRect.localPosition = newposition;
+            }
+
+            oxySprites.Add(newoxySprite);
+        }
+        
     }
 }
