@@ -121,12 +121,14 @@ public class itemSlot : MonoBehaviour, IPointerClickHandler
     {
         GameObject itemToDrop = new GameObject(itemName);
         Item newItem = itemToDrop.AddComponent<Item>();
-        floatingObjects floatingobjects = itemToDrop.AddComponent<floatingObjects>();
+        //floatingObjects floatingobjects = itemToDrop.AddComponent<floatingObjects>();
         newItem.itemName = itemName;
         newItem.amount = 1;
         newItem.itemSprite = itemSprite;
         newItem.itemUsable = itemUsable;
         newItem.itemDescription = itemDescription;
+
+        itemToDrop.tag = "Garbage";
 
         SpriteRenderer sr = itemToDrop.AddComponent<SpriteRenderer>();
         sr.sprite = itemSprite;
@@ -137,7 +139,7 @@ public class itemSlot : MonoBehaviour, IPointerClickHandler
         Rigidbody2D rb = itemToDrop.AddComponent <Rigidbody2D>();
         rb.bodyType = RigidbodyType2D.Kinematic;
 
-        itemToDrop.transform.position = GameObject.Find("Player").transform.position + new Vector3(1, 0, 0);
+        itemToDrop.transform.position = GameObject.Find("Player").transform.position + new Vector3(0.5f, 0, 0);
         itemToDrop.transform.localScale = new Vector3(1f, 1f, 1f);
 
         this.quantity -= 1;

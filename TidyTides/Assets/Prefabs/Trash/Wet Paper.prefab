@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 7514106887856830372}
   m_Layer: 6
   m_Name: Wet Paper
-  m_TagString: Untagged
+  m_TagString: Garbage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,4 +177,5 @@ MonoBehaviour:
   itemName: Wet Paper
   amount: 0
   itemSprite: {fileID: 21300000, guid: f0d1e40651ee67743b7b30c792b50a22, type: 3}
+  itemUsable: 0
   itemDescription: Kids playing with paper lost it and now its under the ocean

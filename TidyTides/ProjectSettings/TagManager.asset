@@ -6,6 +6,7 @@ TagManager:
   tags:
   - LeftBoundary
   - RightBoundary
+  - Garbage
   layers:
   - Default
   - TransparentFX

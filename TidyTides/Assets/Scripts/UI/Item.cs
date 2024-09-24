@@ -13,6 +13,7 @@ public class Item : MonoBehaviour
     [TextArea]
     [SerializeField] public string itemDescription;
 
+    private bool playerisClose;
     private InventoryController inventoryController;
 
     private void Start()
@@ -20,10 +21,9 @@ public class Item : MonoBehaviour
         inventoryController = GameObject.Find("InventoryCanvas").GetComponent<InventoryController>();   
     }
 
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Update()
     {
-        if(collision.gameObject.tag == "Player")
+        if (Input.GetKeyDown(KeyCode.E) && playerisClose)
         {
             int leftOveritems = inventoryController.AddItem(itemName, amount, itemSprite, itemDescription, itemUsable);
             if (leftOveritems <= 0)
@@ -34,7 +34,22 @@ public class Item : MonoBehaviour
             {
                 amount = leftOveritems;
             }
+        }
+    }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            playerisClose = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            playerisClose = false;
         }
     }
 }
