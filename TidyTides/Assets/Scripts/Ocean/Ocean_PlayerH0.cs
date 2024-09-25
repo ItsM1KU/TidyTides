@@ -10,6 +10,7 @@ public class Ocean_PlayerH0 : MonoBehaviour
     [SerializeField] List<GameObject> oxySprites = new List<GameObject>();
 
     [SerializeField] GameObject oxyprefab;
+    [SerializeField] GameObject heartPrefab;
 
 
 
@@ -57,12 +58,36 @@ public class Ocean_PlayerH0 : MonoBehaviour
                 RectTransform newbubbleRect = newoxySprite.GetComponent<RectTransform>();
 
                 Vector3 newposition = lastbubbleRect.localPosition;
-                newposition.x += lastbubbleRect.rect.width + 2f;
+                newposition.x += lastbubbleRect.rect.width + 1f;
                 newbubbleRect.localPosition = newposition;
             }
 
             oxySprites.Add(newoxySprite);
-        }
-        
+        }  
     }
+
+    public void AddHealth()
+    {
+        if (healthSprites.Count < 7)
+        {
+            GameObject newHeart = Instantiate(heartPrefab);
+
+            newHeart.transform.SetParent(healthSprites[0].gameObject.transform.parent);
+            newHeart.transform.localScale = new Vector3(0.556f, 0.556f, 0.556f);
+            newHeart.SetActive(true);
+
+            if (healthSprites.Count > 0)
+            {
+                RectTransform lastheartRect = healthSprites[healthSprites.Count - 1].GetComponent<RectTransform>();
+                RectTransform newHeartRect = newHeart.GetComponent<RectTransform>();
+
+                Vector3 newpos = lastheartRect.localPosition;
+                newpos.x += lastheartRect.rect.position.x + 110f;
+                newHeartRect.localPosition = newpos;
+            }
+
+            healthSprites.Add(newHeart);
+        }
+    }
+
 }

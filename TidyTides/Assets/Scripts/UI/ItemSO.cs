@@ -17,6 +17,12 @@ public class ItemSO : ScriptableObject
             Ocean_PlayerH0 playerHO = GameObject.Find("Canvas").GetComponent<Ocean_PlayerH0>();
             playerHO.oxyTank();
         }
+
+        if(StatToChange == statToChange.health)
+        {
+            Ocean_PlayerH0 playerHO = GameObject.Find("Canvas").GetComponent<Ocean_PlayerH0>();
+            playerHO.AddHealth();
+        }
     }
 
 
