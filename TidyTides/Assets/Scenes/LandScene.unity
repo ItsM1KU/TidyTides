@@ -7062,10 +7062,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogPanel: {fileID: 2093794586}
   dialogText: {fileID: 2029373516}
-  textSpeed: 0.05
+  textSpeed: 0.03
   dialogues:
   - Ahoy, adventurer! Welcome to the great underwater cleanup.
-  - "My name\u2019s Captain Finn, a marine biologist turned ocean protector. I\u2019ve
+  - "My name\u2019s Captain Green, a marine biologist turned ocean protector. I\u2019ve
     spent years down here cleaning up after humans, and now, I could use some extra
     hands\u2014yours!"
   - Before you start, let me explain the basics. Your job is to collect trash from
@@ -7075,6 +7075,8 @@ MonoBehaviour:
     you'll have to resurface, and time is of the essence!
   - "Keep an eye on your progress. The cleaner the ocean gets, the more marine life
     will return. Trust me, it\u2019s a beautiful thing to witness."
+  - "Now, get out there and make the ocean a cleaner place. The sea is counting on
+    you, and I\u2019m here if you ever need advice!"
 --- !u!70 &1906099937
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
