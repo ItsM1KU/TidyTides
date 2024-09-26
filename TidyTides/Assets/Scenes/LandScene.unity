@@ -7064,11 +7064,17 @@ MonoBehaviour:
   dialogText: {fileID: 2029373516}
   textSpeed: 0.05
   dialogues:
-  - Hello
-  - My Name is Cooper, Nice to meet you
-  - Well would you like to help us clean the oceans?
-  - Everyday tons of waste is being thrown into the ocean
-  - So all the aquatic life is getting affected by it
+  - Ahoy, adventurer! Welcome to the great underwater cleanup.
+  - "My name\u2019s Captain Finn, a marine biologist turned ocean protector. I\u2019ve
+    spent years down here cleaning up after humans, and now, I could use some extra
+    hands\u2014yours!"
+  - Before you start, let me explain the basics. Your job is to collect trash from
+    the water using your trusty tools. The more you clean, the healthier the ocean
+    becomes!
+  - Be mindful of your oxygen level and tool durability. Running out of either means
+    you'll have to resurface, and time is of the essence!
+  - "Keep an eye on your progress. The cleaner the ocean gets, the more marine life
+    will return. Trust me, it\u2019s a beautiful thing to witness."
 --- !u!70 &1906099937
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
