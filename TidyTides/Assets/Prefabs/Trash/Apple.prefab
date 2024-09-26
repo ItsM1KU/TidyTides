@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8493389675346842698
+--- !u!1 &8659491233022311793
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7593318618573652740}
-  - component: {fileID: 8001176861443083481}
-  - component: {fileID: 5581414811943057658}
-  - component: {fileID: 706634548283603076}
-  - component: {fileID: 5782324547552885919}
-  - component: {fileID: 4800360677315947541}
+  - component: {fileID: 2544301951309277215}
+  - component: {fileID: 7216255067457699008}
+  - component: {fileID: 8832002955886215993}
+  - component: {fileID: 3956833016150449928}
+  - component: {fileID: 961515471404315170}
+  - component: {fileID: 6969458586021938373}
   m_Layer: 0
-  m_Name: Oxygen Tank
+  m_Name: Apple
   m_TagString: Garbage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7593318618573652740
+--- !u!4 &2544301951309277215
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8493389675346842698}
+  m_GameObject: {fileID: 8659491233022311793}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.4, y: 3.2, z: 0}
-  m_LocalScale: {x: 0.52430916, y: 0.52430916, z: 0.52430916}
+  m_LocalPosition: {x: -1.55, y: 3.24, z: 0}
+  m_LocalScale: {x: 0.3481771, y: 0.3481771, z: 0.3481771}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8001176861443083481
+--- !u!212 &7216255067457699008
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8493389675346842698}
+  m_GameObject: {fileID: 8659491233022311793}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -77,25 +77,25 @@ SpriteRenderer:
   m_SortingLayerID: -15619529
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d92654b5049349445925c8a79ded7cb8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4824605423536d9468952559417e57ff, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.32, y: 0.32}
+  m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &5581414811943057658
+--- !u!50 &8832002955886215993
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8493389675346842698}
+  m_GameObject: {fileID: 8659491233022311793}
   m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -114,14 +114,14 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!61 &706634548283603076
+  m_Constraints: 6
+--- !u!61 &3956833016150449928
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8493389675346842698}
+  m_GameObject: {fileID: 8659491233022311793}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -152,7 +152,7 @@ BoxCollider2D:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 0.32, y: 0.32}
+    newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -160,32 +160,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5782324547552885919
+--- !u!114 &961515471404315170
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8493389675346842698}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2728c9f136d02543a85b71c7c69cf36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &4800360677315947541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8493389675346842698}
+  m_GameObject: {fileID: 8659491233022311793}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e1dbb3f61d8a864bbc94e2d1c017490, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemName: Oxygen Tank
-  amount: 4
-  itemSprite: {fileID: 21300000, guid: d92654b5049349445925c8a79ded7cb8, type: 3}
+  itemName: Apple
+  amount: 3
+  itemSprite: {fileID: 21300000, guid: 4824605423536d9468952559417e57ff, type: 3}
   itemUsable: 1
-  itemDescription: It is a oxygen tank.
+  itemDescription: By consuming this apple, you will restore 1 heart.
+--- !u!114 &6969458586021938373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8659491233022311793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2728c9f136d02543a85b71c7c69cf36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

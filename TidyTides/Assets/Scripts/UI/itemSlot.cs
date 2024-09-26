@@ -43,6 +43,15 @@ public class itemSlot : MonoBehaviour, IPointerClickHandler
             return quantity;
         }
 
+        if (this.quantity <= 0)
+        {
+            this.itemName = "";
+            this.itemDescription = "";
+            this.itemSprite = emptySprite;
+            itemImage.sprite = emptySprite;
+            isFull = false;
+        }
+
         this.itemName = itemName;
         this.itemSprite = itemSprite;
         itemImage.sprite = itemSprite;
@@ -112,6 +121,8 @@ public class itemSlot : MonoBehaviour, IPointerClickHandler
         itemImage.sprite = emptySprite;
         itemDescription = "";
         itemName = "";
+        quantity = 0;
+        isFull = false;
         itemDescImage.sprite = emptySprite;
         itemDescTitle.text = itemName;
         itemDesc.text = itemDescription;
@@ -119,6 +130,12 @@ public class itemSlot : MonoBehaviour, IPointerClickHandler
 
     public void onRightClick()
     {
+        if (this.quantity <= 0 || string.IsNullOrEmpty(itemName))
+        {
+            return; // Exit the function early if the slot is empty
+        }
+
+
         GameObject itemToDrop = new GameObject(itemName);
         Item newItem = itemToDrop.AddComponent<Item>();
         //floatingObjects floatingobjects = itemToDrop.AddComponent<floatingObjects>();
