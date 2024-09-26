@@ -178,4 +178,5 @@ MonoBehaviour:
   amount: 0
   itemSprite: {fileID: 21300000, guid: 955163dd3cda3e24fae54cf30c66947a, type: 3}
   itemUsable: 0
-  itemDescription: This is a Banana Peel that was thrown by people into the ocean!!
+  itemDescription: Someone stepped on a banana peel and fell down. Now it ended up
+    at the bottom of the ocean somehow.

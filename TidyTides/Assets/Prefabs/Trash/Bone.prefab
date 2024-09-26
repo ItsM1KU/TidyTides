@@ -178,4 +178,6 @@ MonoBehaviour:
   amount: 0
   itemSprite: {fileID: 21300000, guid: 9609ad31829aa8f498bff054d748e711, type: 3}
   itemUsable: 0
-  itemDescription: These are the bones of meat that people eat near the beach.
+  itemDescription: 'Its a bone, but whose?
+
+    I guess we''ll never know.'

@@ -707,7 +707,7 @@ SpriteRenderer:
   m_SortingLayerID: -748146647
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: be02ba4823698dc44a10d874510370a4, type: 3}
+  m_Sprite: {fileID: -33722107, guid: 38aff76ef6b9d974f878be32c30e585d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -727,8 +727,8 @@ Transform:
   m_GameObject: {fileID: 325893051}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.334, y: 5.49, z: 0}
-  m_LocalScale: {x: 1.8034151, y: 1.8034151, z: 1.8034151}
+  m_LocalPosition: {x: -5.2973, y: 5.543, z: 0}
+  m_LocalScale: {x: 3.193307, y: 3.193307, z: 3.193307}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -745,7 +745,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 1
-  m_Mass: 0.4448744
+  m_Mass: 0.748211
   m_LinearDrag: 0
   m_AngularDrag: 0
   m_GravityScale: 1
@@ -841,18 +841,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.027282152, y: -0.012320936}
+  m_Offset: {x: 0.023641154, y: 0.0029153302}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
+    oldSize: {x: 0.2, y: 0.36}
     newSize: {x: 0.2, y: 0.36}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.2510082, y: 0.5449518}
+  m_Size: {x: 0.19927251, y: 0.36820984}
   m_EdgeRadius: 0
 --- !u!95 &325893058
 Animator:
@@ -1096,7 +1096,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.3340006, y: 5.49, z: -10}
+  m_LocalPosition: {x: -5.2973003, y: 5.543, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8767,7 +8767,7 @@ Transform:
   m_GameObject: {fileID: 1672381136}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.3340006, y: 5.49, z: -10}
+  m_LocalPosition: {x: -5.2973003, y: 5.543, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -9324,7 +9324,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1880815516}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1981022733}
+        m_TargetAssemblyTypeName: shopItem, Assembly-CSharp
+        m_MethodName: buyItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1880815516
 MonoBehaviour:
   m_ObjectHideFlags: 0
