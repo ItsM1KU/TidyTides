@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 07b3e511905900c4a8ab2cccd9499e7e
+guid: a0a7de92cb6b871469f052ae1c2983db
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -73,6 +73,19 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -106,30 +119,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shark 1_0
+      name: Red!Assets_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 32
-        width: 32
-        height: 32
+        y: 28
+        width: 996
+        height: 996
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 42e8f59d3669cfb48a6ce802076dd5e3
-      internalID: 1146377207
+      spriteID: 4b9a358fdb4829446a82ae2997492261
+      internalID: 333581694
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shark 1_1
+      name: Red!Assets_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 32
-        width: 32
-        height: 32
+        x: 1084
+        y: 28
+        width: 872
+        height: 996
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -158,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6ecf0e9264f713f44a3f65a37cd40530
-      internalID: 1842684347
+      spriteID: 37ae4b76bbea21f4ebeffea91f46f8da
+      internalID: -252282965
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shark 1_2
+      name: Red!Assets_2
       rect:
         serializedVersion: 2
-        x: 64
-        y: 32
-        width: 32
-        height: 32
+        x: 2140
+        y: 28
+        width: 808
+        height: 996
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,20 +179,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d0a1ada3aeef9374bbceb9d509b82e1b
-      internalID: 2023382204
+      spriteID: bc3fa876b0e79714293e5f1d23c24b69
+      internalID: -1849280740
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shark 1_3
+      name: Red!Assets_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 32
-        width: 32
-        height: 32
+        x: 3324
+        y: 28
+        width: 488
+        height: 996
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,20 +200,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 24594ad53fd056845911b679d7db1c19
-      internalID: 1378019069
+      spriteID: a70e22354f73e4c478f0f24d0bc01da4
+      internalID: -1639159099
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shark 1_4
+      name: Red!Assets_4
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 32
-        height: 32
+        x: 4476
+        y: 28
+        width: 232
+        height: 968
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,20 +221,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d68d353d6c211ff4892ce3f477a4589b
-      internalID: 347670568
+      spriteID: 3bc64e08ad3d08442acfb898d2fc2d3d
+      internalID: 540986594
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shark 1_5
+      name: Red!Assets_5
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 5372
+        y: 28
+        width: 488
+        height: 996
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,20 +242,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4b4c37480474474fae5667de4f962fe
-      internalID: 1361120455
+      spriteID: c6108ac49b0d58145842ea55f04f9191
+      internalID: 2071070523
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shark 1_6
+      name: Red!Assets_6
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
+        x: 6268
+        y: 28
+        width: 808
+        height: 996
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -263,20 +263,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f9f4028077d6d184b818ba091921a35c
-      internalID: -1126639998
+      spriteID: aa376de45874f17468e7906db4843586
+      internalID: -1168559342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shark 1_7
+      name: Red!Assets_7
       rect:
         serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
+        x: 7228
+        y: 28
+        width: 872
+        height: 996
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -284,8 +284,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cee9d7a4968920b44acaae980a6aa1f7
-      internalID: -1962251247
+      spriteID: e4a6ae224e90a2a4e8818bca12cbc5a4
+      internalID: 53403957
       vertices: []
       indices: 
       edges: []
@@ -301,14 +301,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shark 1_0: 1146377207
-      Shark 1_1: 1842684347
-      Shark 1_2: 2023382204
-      Shark 1_3: 1378019069
-      Shark 1_4: 347670568
-      Shark 1_5: 1361120455
-      Shark 1_6: -1126639998
-      Shark 1_7: -1962251247
+      Red!Assets_0: 333581694
+      Red!Assets_1: -252282965
+      Red!Assets_2: -1849280740
+      Red!Assets_3: -1639159099
+      Red!Assets_4: 540986594
+      Red!Assets_5: 2071070523
+      Red!Assets_6: -1168559342
+      Red!Assets_7: 53403957
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
