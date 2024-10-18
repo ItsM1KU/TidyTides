@@ -43,4 +43,12 @@ public class mob : MonoBehaviour
     {
         rb.MovePosition((Vector2)transform.position + (movement * speed * Time.deltaTime));
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            Debug.Log("Battle Begins!!");
+        }
+    }
 }
