@@ -16,9 +16,11 @@ Gamifying the process of learning about marine pollution and its solutions makes
 ## Installation
 _You can either install the game or download the project files_
 
+```To install the game directly, click the link below```
+
 | **GAME** | [TidyTides](https://itsm1ku.itch.io/tidytides) |
 
-```To install the project files, Make sure you have Unity Version 2022.3.17f1 ```
+```To download the project files, Make sure you have Unity Version 2022.3.17f1 ```
 
 ## Credits
 We took some artwork from itch and used it in the project. So all the credits goes to the respective owners.
