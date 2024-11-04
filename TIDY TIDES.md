@@ -10,8 +10,7 @@ Gamifying the process of learning about marine pollution and its solutions makes
 
 
 
-GIF goes here!!
-
+ ![](https://github.com/ItsM1KU/TidyTides/blob/main/demo.gif)
 
 
 ## Installation
