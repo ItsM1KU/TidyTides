@@ -49,6 +49,7 @@ public class mob : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Debug.Log("Battle Begins!!");
+
         }
     }
 }

@@ -27,7 +27,7 @@ public class Spawner : MonoBehaviour
         {
             Debug.Log("It works");
             Instantiate(mobSpawner, transform.position, Quaternion.identity);
-            yield return new WaitForSeconds(30);
+            yield return new WaitForSeconds(10);
         }
     }
 

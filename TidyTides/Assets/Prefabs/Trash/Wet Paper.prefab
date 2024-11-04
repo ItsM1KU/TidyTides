@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -15619529
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: f0d1e40651ee67743b7b30c792b50a22, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -178,5 +178,6 @@ MonoBehaviour:
   amount: 0
   itemSprite: {fileID: 21300000, guid: f0d1e40651ee67743b7b30c792b50a22, type: 3}
   itemUsable: 0
+  coinValue: 10
   itemDescription: Dumping your waste in the ocean is not going to solve any problems
     but the complete opposite, it creates new ones.

@@ -6,6 +6,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class OceanPlayerScript : MonoBehaviour
 {
@@ -51,6 +52,7 @@ public class OceanPlayerScript : MonoBehaviour
         }
 
         interactions();
+
     }
 
     void interactions()
@@ -58,21 +60,15 @@ public class OceanPlayerScript : MonoBehaviour
         if (Physics2D.OverlapCircle(rb.position, 0.5f, BoatLayer))
         {
             interactText.gameObject.SetActive(true);
+            
 
             if (oceanMovement.Player.Interact.IsPressed())
             {
-                SceneManager.LoadScene("LandScene");
+
+                    SceneManager.LoadScene("LandScene");
+
             }
         }
-        /*else if (Physics2D.OverlapCircle(rb.position, 0.2f, garbageLayer))
-        {
-            interactText.gameObject.SetActive(true);
-            var garbage = Physics2D.OverlapCircle(rb.position, 0.5f, garbageLayer);
-            if (oceanMovement.Player.Interact.IsPressed())
-            {
-                Destroy(garbage.gameObject);
-            }
-        }*/
         else
         {
             interactText.gameObject.SetActive(false);
@@ -83,5 +79,5 @@ public class OceanPlayerScript : MonoBehaviour
     {
         rb.velocity = (movement * moveSpeed);
     }
-
+    
 }

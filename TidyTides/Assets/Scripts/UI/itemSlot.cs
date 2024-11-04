@@ -13,6 +13,7 @@ public class itemSlot : MonoBehaviour, IPointerClickHandler
     private Sprite itemSprite;
     private string itemDescription;
     private bool itemUsable;
+    private int coinValue;
     public bool isFull;
     [SerializeField] private int maxItems;
 
@@ -36,7 +37,7 @@ public class itemSlot : MonoBehaviour, IPointerClickHandler
         inventoryController = GameObject.Find("InventoryCanvas").GetComponent<InventoryController>();
     }
 
-    public int Additem(string itemName, int quantity, Sprite itemSprite, string itemDescription, bool itemUsable)
+    public int Additem(string itemName, int quantity, Sprite itemSprite, string itemDescription, bool itemUsable, int coinValue)
     {
         if (isFull)
         {
@@ -57,6 +58,7 @@ public class itemSlot : MonoBehaviour, IPointerClickHandler
         itemImage.sprite = itemSprite;
         this.itemDescription = itemDescription;
         this.itemUsable = itemUsable;
+        this.coinValue = coinValue;
 
 
 
@@ -144,6 +146,7 @@ public class itemSlot : MonoBehaviour, IPointerClickHandler
         newItem.itemSprite = itemSprite;
         newItem.itemUsable = itemUsable;
         newItem.itemDescription = itemDescription;
+        newItem.coinValue = coinValue;
 
         itemToDrop.tag = "Garbage";
 

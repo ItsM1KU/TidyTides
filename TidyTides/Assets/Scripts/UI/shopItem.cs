@@ -10,6 +10,7 @@ public class shopItem : MonoBehaviour
     [SerializeField] public int shopQuant;
     [SerializeField] public Sprite itemSprite;
     [SerializeField] public bool itemUsable;
+    [SerializeField] public int coinValue;
     [SerializeField] public int cost;
 
     [TextArea]
@@ -53,7 +54,7 @@ public class shopItem : MonoBehaviour
             coinScript.coins -= cost;
             coinScript.coinText.text = coinScript.coins.ToString();
 
-            inventoryController.AddItem(itemName, amount, itemSprite, itemDescription, itemUsable);
+            inventoryController.AddItem(itemName, amount, itemSprite, itemDescription, itemUsable, coinValue);
 
             shopQuant--;
             quantText.text = shopQuant.ToString();

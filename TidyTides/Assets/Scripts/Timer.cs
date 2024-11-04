@@ -38,4 +38,11 @@ public class Timer : MonoBehaviour
         }
         
     }
+
+    public void AddTime(float amount)
+    {
+        timeRemaining += amount;
+        timerOver = false;
+        timerText.color = Color.white;
+    }
 }

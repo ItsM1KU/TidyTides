@@ -12,6 +12,7 @@ public class NPC : MonoBehaviour
     [SerializeField] string[] dialogues;
     private bool playerisClose;
     private int index = 0;
+    private Coroutine typingCoroutine;
 
     private void Start()
     {
@@ -20,33 +21,52 @@ public class NPC : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && playerisClose)
+        if (Input.GetKeyDown(KeyCode.E) && playerisClose)
         {
             if (!dialogPanel.activeInHierarchy)
             {
                 dialogPanel.SetActive(true);
-                StartCoroutine(typing());
+                StartDialog();
             }
-            else if(dialogText.text == dialogues[index])
+            else if (dialogText.text == dialogues[index])
             {
                 nextline();
             }
-            
         }
 
-        if(Input.GetKeyDown(KeyCode.Q) && dialogPanel.activeInHierarchy)
+        if (Input.GetKeyDown(KeyCode.Q) && dialogPanel.activeInHierarchy)
         {
             closeDialog();
         }
     }
 
+    private void StartDialog()
+    {
+        
+        index = 0;
+        dialogText.text = "";
+
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine); 
+        }
+
+        typingCoroutine = StartCoroutine(typing());
+    }
+
     private void nextline()
     {
-        if(index < dialogues.Length - 1)
+        if (index < dialogues.Length - 1)
         {
             index++;
-            dialogText.text = "";
-            StartCoroutine(typing());
+            dialogText.text = ""; // Clear text
+
+            if (typingCoroutine != null)
+            {
+                StopCoroutine(typingCoroutine); // Stop previous coroutine if still running
+            }
+
+            typingCoroutine = StartCoroutine(typing());
         }
         else
         {
@@ -59,17 +79,23 @@ public class NPC : MonoBehaviour
         dialogText.text = "";
         dialogPanel.SetActive(false);
         index = 0;
+
+        if (typingCoroutine != null)
+        {
+            StopCoroutine(typingCoroutine); // we will stop the coroutine when the player leaves
+            typingCoroutine = null;
+        }
     }
 
     IEnumerator typing()
     {
-        foreach(char letter in dialogues[index].ToCharArray())
+        // Goes through every character in the sentence
+        foreach (char letter in dialogues[index].ToCharArray())
         {
             dialogText.text += letter;
             yield return new WaitForSeconds(textSpeed);
         }
     }
-
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -78,12 +104,13 @@ public class NPC : MonoBehaviour
             playerisClose = true;
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             closeDialog();
-            playerisClose = false;  
+            playerisClose = false;
         }
     }
 }

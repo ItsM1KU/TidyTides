@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -15619529
   m_SortingLayer: 3
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 955163dd3cda3e24fae54cf30c66947a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -178,5 +178,6 @@ MonoBehaviour:
   amount: 0
   itemSprite: {fileID: 21300000, guid: 955163dd3cda3e24fae54cf30c66947a, type: 3}
   itemUsable: 0
+  coinValue: 5
   itemDescription: Someone stepped on a banana peel and fell down. Now it ended up
     at the bottom of the ocean somehow.

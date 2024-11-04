@@ -42,17 +42,17 @@ public class InventoryController : MonoBehaviour
         }
     }
 
-    public int AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription, bool itemUsable)
+    public int AddItem(string itemName, int quantity, Sprite itemSprite, string itemDescription, bool itemUsable, int coinValue)
     {
         for(int i = 0; i < itemslot.Length; i++)
         {
             if (!itemslot[i].isFull && itemslot[i].itemName == itemName || itemslot[i].quantity == 0)
             {
-                int itemLeftOvers = itemslot[i].Additem(itemName, quantity, itemSprite, itemDescription, itemUsable);
+                int itemLeftOvers = itemslot[i].Additem(itemName, quantity, itemSprite, itemDescription, itemUsable, coinValue);
 
                 if (itemLeftOvers > 0)
                 {
-                    itemLeftOvers = AddItem(itemName, itemLeftOvers, itemSprite, itemDescription, itemUsable);
+                    itemLeftOvers = AddItem(itemName, itemLeftOvers, itemSprite, itemDescription, itemUsable, coinValue);
                 }
 
                 return itemLeftOvers;

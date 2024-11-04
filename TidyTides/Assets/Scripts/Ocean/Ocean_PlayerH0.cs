@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using Unity.VisualScripting;
+using UnityEngine.PlayerLoop;
+using UnityEngine.SceneManagement;
 
 public class Ocean_PlayerH0 : MonoBehaviour
 {
@@ -38,7 +41,7 @@ public class Ocean_PlayerH0 : MonoBehaviour
             healthSprites.RemoveAt(healthSprites.Count - 1);
             yield return new WaitForSeconds(5f);
         }
-        Debug.Log("Player dies!!");
+        SceneManager.LoadScene("Gameover");
     }
 
     public void oxyTank()

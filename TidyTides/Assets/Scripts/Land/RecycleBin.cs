@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RecycleBin : MonoBehaviour
 {
-    private List<GameObject> trash = new List<GameObject>();
+    //private List<GameObject> trash = new List<GameObject>();
 
     coinScript coinScript;
 
@@ -18,8 +18,13 @@ public class RecycleBin : MonoBehaviour
     {
         if(collision.gameObject.tag == "Garbage")
         {
+            Item item = collision.gameObject.GetComponent<Item>();
+            if(item != null)
+            {
+                coinScript.AddCoins(item.coinValue);
+            }
+
             Destroy(collision.gameObject);
-            coinScript.AddCoins(5);
         }
     }
 }

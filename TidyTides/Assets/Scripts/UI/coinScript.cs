@@ -17,15 +17,18 @@ public class coinScript : MonoBehaviour
 
     public void AddCoins(int amount)
     {
-        
-        if(coins > MaxCoins)
+
+        if(coins + amount > MaxCoins)
         {
-            Debug.Log("You can have anymore coins");
+            coins = MaxCoins; // Cap the coins to MaxCoins
+            Debug.Log("Max coins reached");
         }
         else
         {
-            coins += amount;
-            coinText.text = coins.ToString();
+            coins += amount; // Add the coins
         }
+
+        // Update the coin text UI after coins are added or capped
+        coinText.text = coins.ToString();
     }
 }

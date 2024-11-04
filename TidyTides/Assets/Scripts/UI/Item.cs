@@ -9,6 +9,7 @@ public class Item : MonoBehaviour
     [SerializeField] public int amount;
     [SerializeField] public Sprite itemSprite;
     [SerializeField] public bool itemUsable;
+    [SerializeField] public int coinValue;
 
     [TextArea]
     [SerializeField] public string itemDescription;
@@ -25,10 +26,11 @@ public class Item : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && playerisClose)
         {
-            int leftOveritems = inventoryController.AddItem(itemName, amount, itemSprite, itemDescription, itemUsable);
+            int leftOveritems = inventoryController.AddItem(itemName, amount, itemSprite, itemDescription, itemUsable, coinValue);
             if (leftOveritems <= 0)
             {
                 Destroy(gameObject);
+                
             }
             else
             {
