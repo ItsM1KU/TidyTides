@@ -1,5 +1,4 @@
 
-![TIDY TIDES.png](https://www.dropbox.com/scl/fi/i6xp4ll7xa1ma7qx0qoma/TIDY-TIDES.png?rlkey=vmq1agqhuwe5n1bunet9jk9sj&dl=0&raw=1)
 ![GitHub last commit](https://img.shields.io/github/last-commit/ItsM1KU/TidyTides)   ![GitHub contributors](https://img.shields.io/github/contributors/ItsM1KU/TidyTides) 
 
 
